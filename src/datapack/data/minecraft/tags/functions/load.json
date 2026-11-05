@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "plm:load/main",
-    "plm:arena/load"
+    "plm:arena/load",
+    "plm:domains/load"
   ]
 }

@@ -8,7 +8,8 @@
 tag @s add mirror_arena_damage_owner
 tag @s add if_death_count
 execute as @e[tag=mirror_dmg_target,limit=1,sort=nearest] if entity @s[tag=mirror_arena_boss] run function plm:arena/hit/skill_true
-execute as @e[tag=mirror_dmg_target,limit=1,sort=nearest] unless entity @s[tag=mirror_arena_boss] run function plm:mirror/damage/true_apply
+execute as @e[tag=mirror_dmg_target,limit=1,sort=nearest] if entity @s[tag=dm_boss] run function plm:domains/skill_true
+execute as @e[tag=mirror_dmg_target,limit=1,sort=nearest] unless entity @s[tag=dm_boss] unless entity @s[tag=mirror_arena_boss] run function plm:mirror/damage/true_apply
 tag @s remove if_death_count
 tag @s remove mirror_arena_damage_owner
 tag @e[tag=mirror_dmg_target] remove mirror_dmg_target

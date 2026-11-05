@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"dm_boss_tomb\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:domains/tomb/hit"
+  }
+}

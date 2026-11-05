@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "plm:arena/hit/base_begin"
+    "plm:arena/hit/base_begin",
+    "plm:domains/protect_hitbox"
   ]
 }

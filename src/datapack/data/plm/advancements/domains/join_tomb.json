@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"plm_gate_join_tomb\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:domains/use/join_tomb"
+  }
+}

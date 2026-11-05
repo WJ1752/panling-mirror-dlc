@@ -45,3 +45,6 @@
 server.properties
 .env
 .env.*
+!/.work/tools/
+/.work/tools/*
+!/.work/tools/rcon.py

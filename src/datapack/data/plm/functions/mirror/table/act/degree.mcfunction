@@ -11,9 +11,9 @@ execute unless data block ~ ~ ~ Items[{Slot:8b,tag:{id:"panling:mirror_dust"}}] 
 execute store result score #t deg run data get block ~ ~ ~ Items[{Slot:3b}].tag.mirror_degree
 execute if score #t deg matches 5.. run return 0
 
-# 需要的倒影核数 = 当前映度 + 1
-scoreboard players operation #t need = #t deg
-scoreboard players add #t need 1
+# 映度 0→5 按 1+1+1+2+2 核收费
+scoreboard players set #t need 1
+execute if score #t deg matches 3.. run scoreboard players set #t need 2
 execute store result score #t count run data get block ~ ~ ~ Items[{Slot:0b}].Count
 scoreboard players operation #t left = #t count
 scoreboard players operation #t left -= #t need

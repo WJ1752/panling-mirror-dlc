@@ -1,0 +1,1 @@
+summon interaction ~ ~ ~ {Tags:["plm_gate_map_mountain"],width:1.6f,height:2.2f,response:1b,Passengers:[{id:"minecraft:text_display",billboard:"center",alignment:"center",transformation:{translation:[0f,0.5f,0f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'{"text": "重华台 · 圣山镜门", "color": "aqua"}'}]}
