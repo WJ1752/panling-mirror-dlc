@@ -1,0 +1,8 @@
+execute if score #arena mirror_summon_type matches 1 run summon minecraft:husk ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomNameVisible:1b,PersistenceRequired:1b,CanPickUpLoot:0b,DeathLootTable:"minecraft:empty",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f]}
+execute if score #arena mirror_summon_type matches 2 run summon minecraft:husk ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomNameVisible:1b,PersistenceRequired:1b,CanPickUpLoot:0b,DeathLootTable:"minecraft:empty",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f]}
+execute if score #arena mirror_summon_type matches 3 run summon minecraft:skeleton ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomNameVisible:1b,PersistenceRequired:1b,CanPickUpLoot:0b,DeathLootTable:"minecraft:empty",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f]}
+execute if score #arena mirror_summon_type matches 4 run summon minecraft:skeleton ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomNameVisible:1b,PersistenceRequired:1b,CanPickUpLoot:0b,DeathLootTable:"minecraft:empty",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f]}
+execute if score #arena mirror_summon_type matches 5 run summon minecraft:stray ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomNameVisible:1b,PersistenceRequired:1b,CanPickUpLoot:0b,DeathLootTable:"minecraft:empty",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f]}
+function plm:arena/summon/equip
+function plm:arena/summon/name
+function plm:arena/summon/tag_color

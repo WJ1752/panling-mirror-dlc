@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/flint"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 370
+      },
+      "model": "panling:item/mirror_mold_sword"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 371
+      },
+      "model": "panling:item/mirror_mold_axe"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 372
+      },
+      "model": "panling:item/mirror_mold_bow"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 373
+      },
+      "model": "panling:item/mirror_mold_crossbow"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 374
+      },
+      "model": "panling:item/mirror_mold_furnace_twin"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 375
+      },
+      "model": "panling:item/mirror_mold_furnace_rub"
+    }
+  ]
+}

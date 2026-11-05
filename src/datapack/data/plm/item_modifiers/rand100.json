@@ -1,0 +1,15 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:generic.luck",
+      "name": "plm_rand100",
+      "operation": "addition",
+      "amount": {
+        "min": 1,
+        "max": 100
+      },
+      "slot": "mainhand"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "__merge_with_base__": true,
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7_pulling_0"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.58,
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7_pulling_1"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 1.0,
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7_pulling_2"
+    },
+    {
+      "predicate": {
+        "charged": 1,
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7_arrow"
+    },
+    {
+      "predicate": {
+        "charged": 1,
+        "firework": 1,
+        "custom_model_data": 103
+      },
+      "model": "panling:item/mirror_crossbow7_firework"
+    }
+  ]
+}

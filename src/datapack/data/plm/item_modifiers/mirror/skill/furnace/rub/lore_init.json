@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "storage",
+    "source": "plm:rub"
+  },
+  "ops": [
+    {
+      "source": "lore_list",
+      "target": "display.Lore",
+      "op": "replace"
+    }
+  ]
+}

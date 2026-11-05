@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/paper"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 400
+      },
+      "model": "panling:item/mirror_seal_1"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 401
+      },
+      "model": "panling:item/mirror_seal_2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 402
+      },
+      "model": "panling:item/mirror_seal_3"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 403
+      },
+      "model": "panling:item/mirror_seal_rev"
+    }
+  ]
+}

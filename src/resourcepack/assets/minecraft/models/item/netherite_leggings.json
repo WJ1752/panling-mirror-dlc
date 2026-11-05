@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/netherite_leggings"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 202
+      },
+      "model": "panling:item/mirror_zhao_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 206
+      },
+      "model": "panling:item/mirror_lie_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 210
+      },
+      "model": "panling:item/mirror_jing_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 214
+      },
+      "model": "panling:item/mirror_can_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 218
+      },
+      "model": "panling:item/mirror_twin_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 222
+      },
+      "model": "panling:item/mirror_rub_leggings"
+    }
+  ]
+}

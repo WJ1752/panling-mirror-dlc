@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/nautilus_shell"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 410
+      },
+      "model": "panling:item/mirror_core"
+    }
+  ]
+}

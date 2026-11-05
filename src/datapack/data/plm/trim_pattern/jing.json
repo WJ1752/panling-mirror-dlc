@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:jing",
+  "description": {
+    "translate": "trim_pattern.plm.jing"
+  },
+  "template_item": "minecraft:air"
+}

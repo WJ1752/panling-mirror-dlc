@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "t00": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:blaze"
+        }
+      }
+    },
+    "t01": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:ghast"
+        }
+      }
+    },
+    "t02": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:pillager"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "t00",
+      "t01",
+      "t02"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:mirror/skill/furnace/rub/kill/ranged"
+  }
+}

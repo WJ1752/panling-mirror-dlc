@@ -1,0 +1,58 @@
+{
+  "criteria": {
+    "other_target": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"mirror_arena_member\"]}"
+        },
+        "entity": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"mirror_arena_boss\"]}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "other_damage": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"mirror_arena_member\"]}"
+        },
+        "damage": {
+          "taken": {
+            "min": 0.05
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "plm:player_attack",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "other_target",
+      "other_damage"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:arena/event/other_hit"
+  }
+}

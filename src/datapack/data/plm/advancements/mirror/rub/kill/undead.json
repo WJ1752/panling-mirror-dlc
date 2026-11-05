@@ -1,0 +1,137 @@
+{
+  "criteria": {
+    "t00": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:drowned"
+        }
+      }
+    },
+    "t01": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:giant"
+        }
+      }
+    },
+    "t02": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:husk"
+        }
+      }
+    },
+    "t03": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:phantom"
+        }
+      }
+    },
+    "t04": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:skeleton"
+        }
+      }
+    },
+    "t05": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:skeleton_horse"
+        }
+      }
+    },
+    "t06": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:stray"
+        }
+      }
+    },
+    "t07": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither"
+        }
+      }
+    },
+    "t08": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither_skeleton"
+        }
+      }
+    },
+    "t09": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zoglin"
+        }
+      }
+    },
+    "t10": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie"
+        }
+      }
+    },
+    "t11": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie_horse"
+        }
+      }
+    },
+    "t12": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombie_villager"
+        }
+      }
+    },
+    "t13": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombified_piglin"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "t00",
+      "t01",
+      "t02",
+      "t03",
+      "t04",
+      "t05",
+      "t06",
+      "t07",
+      "t08",
+      "t09",
+      "t10",
+      "t11",
+      "t12",
+      "t13"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:mirror/skill/furnace/rub/kill/undead"
+  }
+}

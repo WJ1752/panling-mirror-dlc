@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "changed": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{mirror:1}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "plm:weapon/refresh/hook"
+    }
+}

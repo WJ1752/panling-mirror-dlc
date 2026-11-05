@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "plm:mirror/set/count",
+        "plm:weapon/set/count"
+    ]
+}

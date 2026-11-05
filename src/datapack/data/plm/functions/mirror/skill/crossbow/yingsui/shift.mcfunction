@@ -1,0 +1,29 @@
+# 影随 · 第 11 个点：丢最旧（slot 1），其余前移，n 固定回 10
+scoreboard players operation @s mirror_ys_x1 = @s mirror_ys_x2
+scoreboard players operation @s mirror_ys_y1 = @s mirror_ys_y2
+scoreboard players operation @s mirror_ys_z1 = @s mirror_ys_z2
+scoreboard players operation @s mirror_ys_x2 = @s mirror_ys_x3
+scoreboard players operation @s mirror_ys_y2 = @s mirror_ys_y3
+scoreboard players operation @s mirror_ys_z2 = @s mirror_ys_z3
+scoreboard players operation @s mirror_ys_x3 = @s mirror_ys_x4
+scoreboard players operation @s mirror_ys_y3 = @s mirror_ys_y4
+scoreboard players operation @s mirror_ys_z3 = @s mirror_ys_z4
+scoreboard players operation @s mirror_ys_x4 = @s mirror_ys_x5
+scoreboard players operation @s mirror_ys_y4 = @s mirror_ys_y5
+scoreboard players operation @s mirror_ys_z4 = @s mirror_ys_z5
+scoreboard players operation @s mirror_ys_x5 = @s mirror_ys_x6
+scoreboard players operation @s mirror_ys_y5 = @s mirror_ys_y6
+scoreboard players operation @s mirror_ys_z5 = @s mirror_ys_z6
+scoreboard players operation @s mirror_ys_x6 = @s mirror_ys_x7
+scoreboard players operation @s mirror_ys_y6 = @s mirror_ys_y7
+scoreboard players operation @s mirror_ys_z6 = @s mirror_ys_z7
+scoreboard players operation @s mirror_ys_x7 = @s mirror_ys_x8
+scoreboard players operation @s mirror_ys_y7 = @s mirror_ys_y8
+scoreboard players operation @s mirror_ys_z7 = @s mirror_ys_z8
+scoreboard players operation @s mirror_ys_x8 = @s mirror_ys_x9
+scoreboard players operation @s mirror_ys_y8 = @s mirror_ys_y9
+scoreboard players operation @s mirror_ys_z8 = @s mirror_ys_z9
+scoreboard players operation @s mirror_ys_x9 = @s mirror_ys_x10
+scoreboard players operation @s mirror_ys_y9 = @s mirror_ys_y10
+scoreboard players operation @s mirror_ys_z9 = @s mirror_ys_z10
+scoreboard players set @s mirror_path_n 10

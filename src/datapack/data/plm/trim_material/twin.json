@@ -1,0 +1,9 @@
+{
+  "asset_name": "twin",
+  "description": {
+    "color": "#E8C060",
+    "translate": "trim_material.plm.twin"
+  },
+  "ingredient": "minecraft:quartz",
+  "item_model_index": 0.5
+}

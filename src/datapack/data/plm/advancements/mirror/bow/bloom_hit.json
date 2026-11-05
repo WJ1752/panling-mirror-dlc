@@ -1,0 +1,80 @@
+{
+  "criteria": {
+    "bloom_hit_monster": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"monster\"]}"
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "direct_entity": {
+              "type": "minecraft:arrow",
+              "nbt": "{Tags:[\"mirror_bloom_arrow\"]}"
+            }
+          }
+        }
+      }
+    },
+    "bloom_hit_boss": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"mirror_boss\"]}"
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "direct_entity": {
+              "type": "minecraft:arrow",
+              "nbt": "{Tags:[\"mirror_bloom_arrow\"]}"
+            }
+          }
+        }
+      }
+    },
+    "bloom_hit_summon": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"mirror_summon\"]}"
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ],
+            "direct_entity": {
+              "type": "minecraft:arrow",
+              "nbt": "{Tags:[\"mirror_bloom_arrow\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bloom_hit_monster",
+      "bloom_hit_boss",
+      "bloom_hit_summon"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:mirror/skill/bow/bloom_hit"
+  }
+}

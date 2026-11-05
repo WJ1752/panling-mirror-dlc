@@ -1,0 +1,9 @@
+{
+  "asset_name": "can",
+  "description": {
+    "color": "#5FD6E8",
+    "translate": "trim_material.plm.can"
+  },
+  "ingredient": "minecraft:quartz",
+  "item_model_index": 0.4
+}

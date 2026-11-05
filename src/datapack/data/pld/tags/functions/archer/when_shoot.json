@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "plm:mirror/input/archer",
+        "plm:mirror/ranged/tag_arrows",
+        "plm:mirror/set/jing_hua/on_shoot"
+    ]
+}

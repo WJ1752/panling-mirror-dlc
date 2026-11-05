@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/netherite_helmet"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 200
+      },
+      "model": "panling:item/mirror_zhao_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 204
+      },
+      "model": "panling:item/mirror_lie_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 208
+      },
+      "model": "panling:item/mirror_jing_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 212
+      },
+      "model": "panling:item/mirror_can_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 216
+      },
+      "model": "panling:item/mirror_twin_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 220
+      },
+      "model": "panling:item/mirror_rub_helmet"
+    }
+  ]
+}

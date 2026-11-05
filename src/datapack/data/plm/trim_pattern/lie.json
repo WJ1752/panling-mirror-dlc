@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:lie",
+  "description": {
+    "translate": "trim_pattern.plm.lie"
+  },
+  "template_item": "minecraft:air"
+}

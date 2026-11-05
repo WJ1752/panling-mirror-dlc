@@ -1,0 +1,6 @@
+# 开发用：发放一套可测试的镜装（武器 + 胸甲），用于验证 mirror_base 激活
+# 用法：execute as <玩家> run function plm:dev/give_test_gear
+
+give @s minecraft:carrot_on_a_stick{id:"panling:mirror_sword7",type:1,CustomModelData:100,limit:0,branch:1,rare:7,limit_lvl:0,canenchant:3,can_sweep:1,mirror:1,mirror_ver:2,mirror_base:{base:{atk_pt:19.4,atk_sp:2.0}},display:{Name:'{"text":"照心镜剑（测试）"}',Lore:['{"text":"mirror_base 激活测试"}']},HideFlags:63,Unbreakable:1b,act:0,modify:0} 1
+give @s minecraft:netherite_chestplate{id:"panling:mirror_zhao_1",type:2,is_armor:1,slot:1,CustomModelData:201,limit:3,rare:7,limit_lvl:0,canenchant:3,set_bonus_id:10,mirror:1,mirror_ver:2,mirror_base:{base:{armor:1,toughness:0,health:8}},attribute_to_enable:[{Slot:"chest",UUID:[I;72,1,1,1],Operation:0,AttributeName:"minecraft:generic.armor",Amount:9d},{Slot:"chest",UUID:[I;72,1,1,2],Operation:0,AttributeName:"minecraft:generic.armor_toughness",Amount:3d},{Slot:"chest",UUID:[I;72,1,1,3],Operation:0,AttributeName:"minecraft:generic.knockback_resistance",Amount:0.1d},{Slot:"chest",UUID:[I;72,1,1,4],Operation:0,AttributeName:"minecraft:generic.max_health",Amount:8d}],Trim:{pattern:"plm:zhao",material:"plm:zhao"},display:{Name:'{"text":"照心镜甲（测试）"}',Lore:['{"text":"mirror_base 激活测试"}']},HideFlags:63,Unbreakable:1b,act:0,modify:0} 1
+tellraw @s {"text":"[镜中倒影] 已发放测试镜装；请把武器放到快捷栏 1 格并设置 WeaponSlot=1，胸甲穿到胸甲槽。","color":"aqua"}

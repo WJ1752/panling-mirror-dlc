@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "skill_hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_armor",
+                "expected": true
+              },
+              {
+                "id": "minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "minecraft:player_attack",
+                "expected": false
+              },
+              {
+                "id": "plm:player_attack",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "skill_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:weapon/dmg/skill_hit"
+  }
+}

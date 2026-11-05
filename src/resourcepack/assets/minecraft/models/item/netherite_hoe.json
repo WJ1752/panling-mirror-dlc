@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "item/netherite_hoe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 104
+      },
+      "model": "panling:item/mirror_furnace_twin7"
+    }
+  ]
+}

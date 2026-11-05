@@ -1,0 +1,4 @@
+execute if score #arena mirror_summon_type matches 1 run summon minecraft:ghast ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomName:'{"text":"镜影·恶魂","color":"light_purple"}',CustomNameVisible:1b,PersistenceRequired:1b,Silent:1b,DeathLootTable:"minecraft:empty"}
+execute if score #arena mirror_summon_type matches 2 run summon minecraft:magma_cube ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomName:'{"text":"镜影·熔岩怪","color":"light_purple"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:"minecraft:empty"}
+execute if score #arena mirror_summon_type matches 3 run summon minecraft:blaze ~ ~ ~ {Tags:["mirror_summon","mirror_arena_mob","mirror_new","monster"],CustomName:'{"text":"镜影·烈焰人","color":"light_purple"}',CustomNameVisible:1b,PersistenceRequired:1b,DeathLootTable:"minecraft:empty"}
+tag @e[tag=mirror_arena_mob,distance=0..,tag=mirror_new] remove mirror_new

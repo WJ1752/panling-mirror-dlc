@@ -1,0 +1,8 @@
+# 印的 actionbar：「印 3/5 · 亡灵」
+# 类型：1 亡灵 / 2 远程 / 3 兽 / 4 其他（默认，含未记录）
+# 上限用 mirror_rub_max 动态显示（3 / 5），不要写死。
+execute if score @s mirror_rub_type matches 1 run title @s actionbar [{"text":"印 ","color":"aqua"},{"score":{"name":"@s","objective":"mirror_rub_stack"},"color":"white"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"mirror_rub_max"},"color":"white"},{"text":" · 亡灵","color":"gray"}]
+execute if score @s mirror_rub_type matches 2 run title @s actionbar [{"text":"印 ","color":"aqua"},{"score":{"name":"@s","objective":"mirror_rub_stack"},"color":"white"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"mirror_rub_max"},"color":"white"},{"text":" · 远程","color":"gray"}]
+execute if score @s mirror_rub_type matches 3 run title @s actionbar [{"text":"印 ","color":"aqua"},{"score":{"name":"@s","objective":"mirror_rub_stack"},"color":"white"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"mirror_rub_max"},"color":"white"},{"text":" · 兽","color":"gray"}]
+execute if score @s mirror_rub_type matches 4 run title @s actionbar [{"text":"印 ","color":"aqua"},{"score":{"name":"@s","objective":"mirror_rub_stack"},"color":"white"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"mirror_rub_max"},"color":"white"},{"text":" · 其他","color":"gray"}]
+execute unless score @s mirror_rub_type matches 1..4 run title @s actionbar [{"text":"印 ","color":"aqua"},{"score":{"name":"@s","objective":"mirror_rub_stack"},"color":"white"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"mirror_rub_max"},"color":"white"},{"text":" · 未记录","color":"gray"}]

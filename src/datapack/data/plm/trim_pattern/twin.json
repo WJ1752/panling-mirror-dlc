@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:twin",
+  "description": {
+    "translate": "trim_pattern.plm.twin"
+  },
+  "template_item": "minecraft:air"
+}

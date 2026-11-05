@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "killed": {
+            "trigger": "minecraft:player_killed_entity"
+        }
+    },
+    "rewards": {
+        "function": "plm:weapon/event/kill"
+    }
+}

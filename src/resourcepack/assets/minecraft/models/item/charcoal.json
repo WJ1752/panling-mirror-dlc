@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/charcoal"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 376
+      },
+      "model": "panling:item/mirror_mold_helmet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 377
+      },
+      "model": "panling:item/mirror_mold_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 378
+      },
+      "model": "panling:item/mirror_mold_leggings"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 379
+      },
+      "model": "panling:item/mirror_mold_boots"
+    }
+  ]
+}

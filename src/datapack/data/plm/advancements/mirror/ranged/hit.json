@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "arrow_hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arrow_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:mirror/ranged/hit"
+  }
+}

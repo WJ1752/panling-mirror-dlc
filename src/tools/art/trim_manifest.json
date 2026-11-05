@@ -1,0 +1,1020 @@
+{
+  "schema": "mirror-trim-manifest/1",
+  "project": "梦回盘灵：镜中倒影",
+  "version": "1.0.0",
+  "generated_by": "src/tools/art/gen_trims.py（从落盘 PNG 重算）",
+  "single_source_of_truth": true,
+  "resourcepack_root": "src/resourcepack",
+  "namespace": "plm",
+  "carrier": "minecraft:netherite_helmet / chestplate / leggings / boots",
+  "canvas": {
+    "base": {
+      "size": [
+        128,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha": "binary (0/255)",
+      "outline": "alpha 严格等于 vanilla netherite_layer_* 的 2× 放大"
+    },
+    "trim": {
+      "size": [
+        64,
+        32
+      ],
+      "mode": "RGBA",
+      "alpha": "binary (0/255)",
+      "gray_levels": [
+        0,
+        32,
+        64,
+        96,
+        128,
+        160,
+        192,
+        224
+      ]
+    }
+  },
+  "rules": {
+    "base_palette": [
+      "#10151A",
+      "#1C2530",
+      "#2C3944",
+      "#47596A",
+      "#6E8494",
+      "#9DB2BE",
+      "#C9DCE6",
+      "#E2EFF5",
+      "#F4FBFF"
+    ],
+    "base_max_pure_white_ratio": 0.02,
+    "base_max_cyan_ratio": 0.02,
+    "trim_max_coverage": {
+      "layer_1": 0.08,
+      "leggings": 0.03
+    },
+    "trim_min_coverage": {
+      "layer_1": 0.03,
+      "leggings": 0.007
+    },
+    "trim_only_gray_values": [
+      0,
+      32,
+      64,
+      96,
+      128,
+      160,
+      192,
+      224
+    ],
+    "trim_line_width_px": 1,
+    "trim_must_stay_inside_netherite_alpha": true,
+    "do_not_touch": "src/resourcepack/**"
+  },
+  "palette": {
+    "size": [
+      8,
+      1
+    ],
+    "order": "dark_to_light",
+    "key": {
+      "texture": "assets/plm/textures/trims/color_palettes/key.png",
+      "resource_location": "plm:trims/color_palettes/key",
+      "values": [
+        0,
+        32,
+        64,
+        96,
+        128,
+        160,
+        192,
+        224
+      ],
+      "order": "ascending 0→224"
+    },
+    "why_custom_key": "原版 trim_palette 索引 0=224、7=0；本规范调色板按“深→浅”落盘。若用原版 key，224 会映射到最深夜色，明暗反转。升序 key 让 gray/32 直接等于索引，既满足“深→浅”的交付要求，也保证游戏内亮度正确。"
+  },
+  "atlas": {
+    "path": "assets/minecraft/atlases/armor_trims.json",
+    "vanilla_sha1": "b2e64a676161bd61567dd59a6e0d93ead6d1a52d",
+    "operation": "append_source",
+    "preserve_vanilla_source": true,
+    "source_count_after": 2,
+    "source": {
+      "type": "paletted_permutations",
+      "textures": [
+        "plm:trims/models/armor/zhao",
+        "plm:trims/models/armor/zhao_leggings",
+        "plm:trims/models/armor/lie",
+        "plm:trims/models/armor/lie_leggings",
+        "plm:trims/models/armor/jing",
+        "plm:trims/models/armor/jing_leggings",
+        "plm:trims/models/armor/can",
+        "plm:trims/models/armor/can_leggings",
+        "plm:trims/models/armor/twin",
+        "plm:trims/models/armor/twin_leggings",
+        "plm:trims/models/armor/rub",
+        "plm:trims/models/armor/rub_leggings"
+      ],
+      "palette_key": "plm:trims/color_palettes/key",
+      "separator": "_",
+      "permutations": {
+        "zhao": "plm:trims/color_palettes/zhao",
+        "lie": "plm:trims/color_palettes/lie",
+        "jing": "plm:trims/color_palettes/jing",
+        "can": "plm:trims/color_palettes/can",
+        "twin": "plm:trims/color_palettes/twin",
+        "rub": "plm:trims/color_palettes/rub"
+      }
+    },
+    "patch_file": "out/trim_sample/armor_trims_plm_patch.json",
+    "shipped": {
+      "operation": "merge_into_vanilla_source",
+      "source_count_after": 1,
+      "palette_key": "trims/color_palettes/trim_palette",
+      "palette_key_texture": "assets/minecraft/textures/trims/color_palettes/trim_palette.png",
+      "textures_added": [
+        "plm:trims/models/armor/zhao",
+        "plm:trims/models/armor/zhao_leggings",
+        "plm:trims/models/armor/lie",
+        "plm:trims/models/armor/lie_leggings",
+        "plm:trims/models/armor/jing",
+        "plm:trims/models/armor/jing_leggings",
+        "plm:trims/models/armor/can",
+        "plm:trims/models/armor/can_leggings",
+        "plm:trims/models/armor/twin",
+        "plm:trims/models/armor/twin_leggings",
+        "plm:trims/models/armor/rub",
+        "plm:trims/models/armor/rub_leggings"
+      ],
+      "permutations_added": {
+        "zhao": "plm:trims/color_palettes/zhao",
+        "lie": "plm:trims/color_palettes/lie",
+        "jing": "plm:trims/color_palettes/jing",
+        "can": "plm:trims/color_palettes/can",
+        "twin": "plm:trims/color_palettes/twin",
+        "rub": "plm:trims/color_palettes/rub"
+      },
+      "note": "集成按任务 gate 落盘：在 sources[0] 内追加，palette_key 保持原版（不能用 plm 升序 key）。六套 palette 仍按“深→浅”落盘（美术要求）；配原版降序 key 会把纹饰明暗反转（规范 §4.7 的取舍项），是否反存调色板待美术侧决定。"
+    }
+  },
+  "base": {
+    "shared": true,
+    "layer_1": {
+      "texture": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+      "size": [
+        128,
+        64
+      ],
+      "sample": "out/trim_sample/base_mirror_netherite_layer_1.png"
+    },
+    "layer_2": {
+      "texture": "assets/minecraft/textures/models/armor/netherite_layer_2.png",
+      "size": [
+        128,
+        64
+      ],
+      "sample": "out/trim_sample/base_mirror_netherite_layer_2.png"
+    },
+    "style": {
+      "ramp": [
+        "#10151A",
+        "#1C2530",
+        "#2C3944",
+        "#47596A",
+        "#6E8494",
+        "#9DB2BE",
+        "#C9DCE6",
+        "#E2EFF5",
+        "#F4FBFF"
+      ],
+      "light": "左上",
+      "seams": "UV 面倒角 1px + 甲片横缝 1px；窄面（<6px）不画竖倒角",
+      "glints": "3 条 2–3px 斜线 #F4FBFF，≤2% 覆盖",
+      "forbidden": [
+        "大面积青色发光",
+        "外部扩边改变 alpha",
+        "把六套强调色烤进底甲"
+      ]
+    },
+    "note": "六套共用同一张底甲；差异化 100% 由 trim pattern + palette 承担。最终底甲由 gen_netherite_base.py 生成（build 2026-11-03，sha1 L1 064c1576bbc2cd64 / L2 3e054815f8117908），sample 与最终文件同源。"
+  },
+  "placement": {
+    "layer_1": {
+      "helmet_crown": {
+        "box": [
+          8,
+          0,
+          8,
+          8
+        ],
+        "anchor": [
+          11.5,
+          3.5
+        ],
+        "r": 2.0,
+        "sentry": "x=11..12, y=0..7（中脊）"
+      },
+      "helmet_brow": {
+        "box": [
+          8,
+          9,
+          8,
+          1
+        ],
+        "anchor": [
+          11.5,
+          9.0
+        ],
+        "r": null,
+        "sentry": "y=8..10（额带；y11..15 为面甲开口，禁止）"
+      },
+      "helmet_back": {
+        "box": [
+          27,
+          8,
+          2,
+          6
+        ],
+        "anchor": [
+          27.5,
+          10.5
+        ],
+        "r": null,
+        "sentry": "x=27..28, y=8..13"
+      },
+      "shoulder_top": {
+        "box": [
+          44,
+          16,
+          4,
+          4
+        ],
+        "anchor": [
+          45.5,
+          17.5
+        ],
+        "r": 1.6,
+        "sentry": "x=44..45, y=17..18"
+      },
+      "shoulder_ring": {
+        "box": [
+          40,
+          22,
+          16,
+          2
+        ],
+        "anchor": [
+          47.5,
+          22.0
+        ],
+        "r": null,
+        "sentry": "x=40..45, y=20..22"
+      },
+      "chest_front": {
+        "box": [
+          20,
+          20,
+          8,
+          12
+        ],
+        "anchor": [
+          23.5,
+          26.2
+        ],
+        "r": 2.6,
+        "sentry": "x=21..26, y=23..28"
+      },
+      "boot_band": {
+        "box": [
+          0,
+          26,
+          16,
+          2
+        ],
+        "anchor": [
+          7.5,
+          26.0
+        ],
+        "r": null,
+        "sentry": "x=2..9, y=26..27"
+      }
+    },
+    "layer_2": {
+      "thigh_band": {
+        "box": [
+          0,
+          23,
+          16,
+          2
+        ],
+        "anchor": [
+          7.5,
+          23.0
+        ],
+        "r": null,
+        "sentry": "sentry_leggings x=0..15, y=22..25"
+      },
+      "waist_front": {
+        "box": [
+          20,
+          27,
+          8,
+          5
+        ],
+        "anchor": [
+          23.5,
+          29.0
+        ],
+        "r": 2.4,
+        "sentry": "vanilla netherite_layer_2 可见前腰 y=27..31；规范原锚点 y=25 在遮罩外，已修正"
+      },
+      "knee_band": {
+        "box": [
+          0,
+          26,
+          16,
+          1
+        ],
+        "anchor": [
+          7.5,
+          26.0
+        ],
+        "r": null,
+        "sentry": "腿面 y=20..28 的下段；规范原 box y=29 在遮罩外，已修正"
+      }
+    }
+  },
+  "sets": {
+    "zhao": {
+      "key": "zhao",
+      "name": "照心",
+      "armor_set": "照心镜",
+      "motif": "rings",
+      "motif_cn": "同心圆 / 镜盘",
+      "motif_recipe": "外环 r=2.6（192）+ 内环 r=1.6（160）+ 中心 1px 224；盔顶 r=2.5 环 + 上下 1px 短脊 + 160 中脊；甲带 192 主线 + 96 副线 + 每 4px 224。",
+      "accent": [
+        "#F2D48A",
+        "#FFF6E0"
+      ],
+      "accent_dark": "#A87C2E",
+      "gray_roles": {
+        "line": {
+          "gray": 192,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 160,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 96,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 224,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/zhao.png",
+        "resource_location": "plm:trims/color_palettes/zhao",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#2A1D0B",
+          "#4A3312",
+          "#6E4C1B",
+          "#A87C2E",
+          "#C9A24A",
+          "#E2C070",
+          "#F2D48A",
+          "#FFF6E0"
+        ],
+        "luminance": [
+          30.5,
+          53.5,
+          79.7,
+          127.7,
+          163.9,
+          193.5,
+          213.0,
+          246.3
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/zhao.png",
+          "resource_location": "plm:trims/models/armor/zhao",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/zhao_leggings.png",
+          "resource_location": "plm:trims/models/armor/zhao_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:zhao",
+        "material_id": "plm:zhao",
+        "nbt": "{Trim:{pattern:\"plm:zhao\",material:\"plm:zhao\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.zhao",
+        "material_key": "trim_material.plm.zhao",
+        "pattern_zh": "照心纹",
+        "material_zh": "照心镜"
+      },
+      "coverage": {
+        "layer_1": 0.0513,
+        "leggings": 0.0254
+      },
+      "gray_values": [
+        96,
+        160,
+        192,
+        224
+      ]
+    },
+    "lie": {
+      "key": "lie",
+      "name": "裂影",
+      "armor_set": "裂影镜",
+      "motif": "crack",
+      "motif_cn": "斜向折痕 + 碎片",
+      "motif_recipe": "胸心 2 段折痕（192）+ 折点 160 + 单端 128 阴影 + 1px 224 碎片；盔顶 2 段短折痕 + 160/224 各 1px 碎片；甲带 2on1off 192 + 1on2off 128。",
+      "accent": [
+        "#A46BE8",
+        "#E05FA8"
+      ],
+      "accent_dark": "#5E3A85",
+      "gray_roles": {
+        "line": {
+          "gray": 192,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 160,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 128,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 224,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/lie.png",
+        "resource_location": "plm:trims/color_palettes/lie",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#22102F",
+          "#3B1E52",
+          "#5E3A85",
+          "#7A45A8",
+          "#A46BE8",
+          "#C77AE8",
+          "#E88FC0",
+          "#F7DCEF"
+        ],
+        "luminance": [
+          22.1,
+          39.9,
+          71.1,
+          87.4,
+          128.1,
+          146.3,
+          165.5,
+          227.1
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/lie.png",
+          "resource_location": "plm:trims/models/armor/lie",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/lie_leggings.png",
+          "resource_location": "plm:trims/models/armor/lie_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:lie",
+        "material_id": "plm:lie",
+        "nbt": "{Trim:{pattern:\"plm:lie\",material:\"plm:lie\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.lie",
+        "material_key": "trim_material.plm.lie",
+        "pattern_zh": "裂影纹",
+        "material_zh": "裂影镜"
+      },
+      "coverage": {
+        "layer_1": 0.0308,
+        "leggings": 0.0151
+      },
+      "gray_values": [
+        128,
+        160,
+        192,
+        224
+      ]
+    },
+    "jing": {
+      "key": "jing",
+      "name": "镜花",
+      "armor_set": "镜花轻甲",
+      "motif": "flower",
+      "motif_cn": "五瓣花 + 水月弧",
+      "motif_recipe": "5 个 160 花瓣点 + 192 五边形连线 + 1px 224 花心 + 96 底部投影；盔顶 r=2.0 环 + 160 中脊；甲带 2on1off 192 + 160 水月弧 + 96 端点。",
+      "accent": [
+        "#F2A7C3",
+        "#FFF0F5"
+      ],
+      "accent_dark": "#B05C7C",
+      "gray_roles": {
+        "line": {
+          "gray": 192,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 160,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 96,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 224,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/jing.png",
+        "resource_location": "plm:trims/color_palettes/jing",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#2A1420",
+          "#4A2233",
+          "#7A3F55",
+          "#B05C7C",
+          "#D07E9C",
+          "#F2A7C3",
+          "#FAD0DF",
+          "#FFF0F5"
+        ],
+        "luminance": [
+          25.5,
+          43.7,
+          77.1,
+          112.2,
+          145.6,
+          185.0,
+          218.0,
+          243.5
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/jing.png",
+          "resource_location": "plm:trims/models/armor/jing",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/jing_leggings.png",
+          "resource_location": "plm:trims/models/armor/jing_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:jing",
+        "material_id": "plm:jing",
+        "nbt": "{Trim:{pattern:\"plm:jing\",material:\"plm:jing\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.jing",
+        "material_key": "trim_material.plm.jing",
+        "pattern_zh": "镜花纹",
+        "material_zh": "镜花轻甲"
+      },
+      "coverage": {
+        "layer_1": 0.0405,
+        "leggings": 0.0186
+      },
+      "gray_values": [
+        96,
+        160,
+        192,
+        224
+      ]
+    },
+    "can": {
+      "key": "can",
+      "name": "残影",
+      "armor_set": "残影轻甲",
+      "motif": "ghost",
+      "motif_cn": "偏移双线 + 速度线",
+      "motif_recipe": "160 主环 + (+1,+1) 96 偏移环；2 条 2px 192 速度线（与环留 1px）；盔顶 x=10 160 / x=12 96（中间留 1px）；甲带 3on2off 160 + 96 错位。",
+      "accent": [
+        "#5FD6E8",
+        "#1F6F78"
+      ],
+      "accent_dark": "#134A50",
+      "gray_roles": {
+        "line": {
+          "gray": 160,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 192,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 96,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 224,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/can.png",
+        "resource_location": "plm:trims/color_palettes/can",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#0A1E22",
+          "#123A40",
+          "#134A50",
+          "#1F6F78",
+          "#3A9AA6",
+          "#5FD6E8",
+          "#A8E9F2",
+          "#E6FAFC"
+        ],
+        "luminance": [
+          26.0,
+          49.9,
+          62.7,
+          94.6,
+          134.5,
+          190.0,
+          219.8,
+          245.9
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/can.png",
+          "resource_location": "plm:trims/models/armor/can",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/can_leggings.png",
+          "resource_location": "plm:trims/models/armor/can_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:can",
+        "material_id": "plm:can",
+        "nbt": "{Trim:{pattern:\"plm:can\",material:\"plm:can\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.can",
+        "material_key": "trim_material.plm.can",
+        "pattern_zh": "残影纹",
+        "material_zh": "残影轻甲"
+      },
+      "coverage": {
+        "layer_1": 0.0483,
+        "leggings": 0.0176
+      },
+      "gray_values": [
+        96,
+        160,
+        192,
+        224
+      ]
+    },
+    "twin": {
+      "key": "twin",
+      "name": "双生",
+      "armor_set": "双生镜袍",
+      "motif": "twin",
+      "motif_cn": "左右对称双半 + 双点",
+      "motif_recipe": "菱形沿 x=cx 切半：左 192 金 / 右 96 蓝；中轴 224；上下顶点 160 过渡；左上 192 / 右下 96 双点；甲带左金右蓝、下一行交换。",
+      "accent": [
+        "#E8C060",
+        "#4A78C0"
+      ],
+      "accent_dark": "#2F5AA8",
+      "gray_roles": {
+        "line": {
+          "gray": 224,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 160,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 96,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 192,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/twin.png",
+        "resource_location": "plm:trims/color_palettes/twin",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#14294F",
+          "#1E3F73",
+          "#2F5AA8",
+          "#4A78C0",
+          "#8FA6C8",
+          "#C9B47E",
+          "#E8C060",
+          "#FFF0C8"
+        ],
+        "luminance": [
+          39.3,
+          59.7,
+          86.5,
+          115.4,
+          163.6,
+          180.6,
+          193.6,
+          240.3
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/twin.png",
+          "resource_location": "plm:trims/models/armor/twin",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/twin_leggings.png",
+          "resource_location": "plm:trims/models/armor/twin_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:twin",
+        "material_id": "plm:twin",
+        "nbt": "{Trim:{pattern:\"plm:twin\",material:\"plm:twin\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.twin",
+        "material_key": "trim_material.plm.twin",
+        "pattern_zh": "双生纹",
+        "material_zh": "双生镜袍"
+      },
+      "coverage": {
+        "layer_1": 0.0552,
+        "leggings": 0.0259
+      },
+      "gray_values": [
+        96,
+        160,
+        192,
+        224
+      ]
+    },
+    "rub": {
+      "key": "rub",
+      "name": "拓印",
+      "armor_set": "拓印镜袍",
+      "motif": "stamp",
+      "motif_cn": "方印边 + 纸纹",
+      "motif_recipe": "6×6 方框 128 朱红 + 64 墨纹 3 横 1 竖 + 160 印心 + 192 纸纤维；盔顶 5×5 框 + 160 中脊（盖住底甲中脊）+ 64 墨点；甲带 128 短划 + 64 墨点。",
+      "accent": [
+        "#C8483C",
+        "#2B2B2B"
+      ],
+      "accent_dark": "#7A2A24",
+      "gray_roles": {
+        "line": {
+          "gray": 128,
+          "role_cn": "主线"
+        },
+        "mid": {
+          "gray": 160,
+          "role_cn": "中色/副亮"
+        },
+        "shadow": {
+          "gray": 64,
+          "role_cn": "阴影/副线"
+        },
+        "spark": {
+          "gray": 192,
+          "role_cn": "高光/点"
+        }
+      },
+      "palette": {
+        "texture": "assets/plm/textures/trims/color_palettes/rub.png",
+        "resource_location": "plm:trims/color_palettes/rub",
+        "size": [
+          8,
+          1
+        ],
+        "order": "dark_to_light",
+        "colors": [
+          "#1A1512",
+          "#2B2B2B",
+          "#4A2320",
+          "#7A2A24",
+          "#C8483C",
+          "#D98B6E",
+          "#E8DFC8",
+          "#F7F1E2"
+        ],
+        "luminance": [
+          21.8,
+          43.0,
+          43.1,
+          58.6,
+          98.3,
+          153.5,
+          223.3,
+          241.2
+        ]
+      },
+      "pattern": {
+        "layer_1": {
+          "texture": "assets/plm/textures/trims/models/armor/rub.png",
+          "resource_location": "plm:trims/models/armor/rub",
+          "size": [
+            64,
+            32
+          ]
+        },
+        "leggings": {
+          "texture": "assets/plm/textures/trims/models/armor/rub_leggings.png",
+          "resource_location": "plm:trims/models/armor/rub_leggings",
+          "size": [
+            64,
+            32
+          ]
+        }
+      },
+      "base": {
+        "shared": true,
+        "layer_1": "assets/minecraft/textures/models/armor/netherite_layer_1.png",
+        "layer_2": "assets/minecraft/textures/models/armor/netherite_layer_2.png"
+      },
+      "trim": {
+        "pattern_id": "plm:rub",
+        "material_id": "plm:rub",
+        "nbt": "{Trim:{pattern:\"plm:rub\",material:\"plm:rub\"}}"
+      },
+      "lang": {
+        "pattern_key": "trim_pattern.plm.rub",
+        "material_key": "trim_material.plm.rub",
+        "pattern_zh": "拓印纹",
+        "material_zh": "拓印镜袍"
+      },
+      "coverage": {
+        "layer_1": 0.0498,
+        "leggings": 0.0161
+      },
+      "gray_values": [
+        64,
+        128,
+        160,
+        192
+      ]
+    }
+  },
+  "lang": {
+    "trim_pattern.plm.zhao": "照心纹",
+    "trim_material.plm.zhao": "照心镜",
+    "trim_pattern.plm.lie": "裂影纹",
+    "trim_material.plm.lie": "裂影镜",
+    "trim_pattern.plm.jing": "镜花纹",
+    "trim_material.plm.jing": "镜花轻甲",
+    "trim_pattern.plm.can": "残影纹",
+    "trim_material.plm.can": "残影轻甲",
+    "trim_pattern.plm.twin": "双生纹",
+    "trim_material.plm.twin": "双生镜袍",
+    "trim_pattern.plm.rub": "拓印纹",
+    "trim_material.plm.rub": "拓印镜袍"
+  },
+  "lang_file": "assets/plm/lang/zh_cn.json",
+  "integration": {
+    "nbt_example": "{Trim:{pattern:\"plm:zhao\",material:\"plm:zhao\"}}",
+    "trim_pattern_json": {
+      "asset_id": "plm:trims/models/armor/zhao",
+      "description": {
+        "translate": "trim_pattern.plm.zhao"
+      },
+      "template_item": "minecraft:netherite_upgrade_smithing_template",
+      "decals": false
+    },
+    "trim_material_json": {
+      "asset_name": "zhao",
+      "description": {
+        "translate": "trim_material.plm.zhao"
+      },
+      "ingredient": "minecraft:netherite_ingot",
+      "item_model_index": 0.1
+    },
+    "template_note": "pattern/material 的 template_item / ingredient 为占位；集成时替换为 DLC 的镜铸模板与镜胚材料，不影响贴图路径。",
+    "item_model_index_step": 0.1
+  },
+  "checks": [
+    "python -I src/tools/art/trim_gen_sample.py",
+    "python -I src/tools/art/trim_gen_sample.py --check",
+    "python -I src/tools/art/trim_art.py --audit out/trim_sample/trim_zhao_layer_1.png --kind trim --layer 1",
+    "python -I src/tools/art/trim_art.py --audit out/trim_sample/base_mirror_netherite_layer_1.png --kind base --layer 1",
+    "python -I src/tools/art/trim_art.py --audit out/trim_sample/palette_zhao.png --kind palette",
+    "python -I src/tools/art/gen_trims.py",
+    "python -I src/tools/art/gen_trims.py --check"
+  ]
+}

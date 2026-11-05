@@ -1,0 +1,9 @@
+{
+  "asset_name": "lie",
+  "description": {
+    "color": "#A46BE8",
+    "translate": "trim_material.plm.lie"
+  },
+  "ingredient": "minecraft:quartz",
+  "item_model_index": 0.2
+}

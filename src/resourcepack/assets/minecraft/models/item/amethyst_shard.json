@@ -1,0 +1,38 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/amethyst_shard"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 340
+      },
+      "model": "panling:item/mirror_heart_metal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 345
+      },
+      "model": "panling:item/mirror_heart_wood"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 350
+      },
+      "model": "panling:item/mirror_heart_water"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 355
+      },
+      "model": "panling:item/mirror_heart_fire"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 360
+      },
+      "model": "panling:item/mirror_heart_earth"
+    }
+  ]
+}

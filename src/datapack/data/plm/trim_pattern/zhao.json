@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:zhao",
+  "description": {
+    "translate": "trim_pattern.plm.zhao"
+  },
+  "template_item": "minecraft:air"
+}

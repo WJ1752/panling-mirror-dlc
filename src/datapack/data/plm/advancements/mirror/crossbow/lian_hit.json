@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "arrow_hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "minecraft:arrow",
+              "nbt": "{Tags:[\"mirror_arrow\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arrow_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:mirror/skill/crossbow/lian/hit"
+  }
+}

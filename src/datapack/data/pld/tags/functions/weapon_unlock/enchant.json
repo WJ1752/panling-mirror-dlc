@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "plm:mirror/enable/weapon",
+        "plm:weapon/parse"
+    ]
+}

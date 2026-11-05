@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"mirror_arena_boss\"]}"
+        },
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "plm:player_attack",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:arena/event/hurt_boss"
+  }
+}

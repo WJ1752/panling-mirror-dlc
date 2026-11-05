@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "melee_hurt": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "expected": false,
+                "id": "minecraft:is_projectile"
+              },
+              {
+                "expected": false,
+                "id": "minecraft:is_explosion"
+              },
+              {
+                "expected": false,
+                "id": "minecraft:bypasses_armor"
+              },
+              {
+                "expected": false,
+                "id": "plm:player_attack"
+              },
+              {
+                "expected": false,
+                "id": "minecraft:player_attack"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:mirror/skill/parry/hurt"
+  }
+}

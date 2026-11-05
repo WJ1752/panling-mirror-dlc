@@ -1,0 +1,9 @@
+{
+  "asset_name": "jing",
+  "description": {
+    "color": "#F2A7C3",
+    "translate": "trim_material.plm.jing"
+  },
+  "ingredient": "minecraft:quartz",
+  "item_model_index": 0.3
+}

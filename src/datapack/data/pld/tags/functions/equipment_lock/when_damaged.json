@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "plm:weapon/event/damaged",
+        "plm:mirror/set/when_damaged"
+    ]
+}

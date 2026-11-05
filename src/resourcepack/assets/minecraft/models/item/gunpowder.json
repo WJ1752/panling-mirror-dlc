@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/gunpowder"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 390
+      },
+      "model": "panling:item/mirror_dust"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "__merge_with_base__": true,
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100
+      },
+      "model": "panling:item/mirror_sword7"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 101
+      },
+      "model": "panling:item/mirror_axe7"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 104
+      },
+      "model": "panling:item/mirror_furnace_twin7"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 105
+      },
+      "model": "panling:item/mirror_furnace_rub7"
+    }
+  ]
+}

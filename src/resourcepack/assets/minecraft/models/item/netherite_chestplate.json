@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/netherite_chestplate"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 201
+      },
+      "model": "panling:item/mirror_zhao_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 205
+      },
+      "model": "panling:item/mirror_lie_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 209
+      },
+      "model": "panling:item/mirror_jing_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 213
+      },
+      "model": "panling:item/mirror_can_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 217
+      },
+      "model": "panling:item/mirror_twin_chestplate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 221
+      },
+      "model": "panling:item/mirror_rub_chestplate"
+    }
+  ]
+}

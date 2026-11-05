@@ -1,0 +1,38 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/netherite_scrap"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 300
+      },
+      "model": "panling:item/mirror_shard_metal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 305
+      },
+      "model": "panling:item/mirror_shard_wood"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 310
+      },
+      "model": "panling:item/mirror_shard_water"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 315
+      },
+      "model": "panling:item/mirror_shard_fire"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 320
+      },
+      "model": "panling:item/mirror_shard_earth"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/quartz"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 380
+      },
+      "model": "panling:item/mirror_edge_zhao"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 381
+      },
+      "model": "panling:item/mirror_edge_lie"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 382
+      },
+      "model": "panling:item/mirror_edge_jing"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 383
+      },
+      "model": "panling:item/mirror_edge_can"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 384
+      },
+      "model": "panling:item/mirror_edge_twin"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 385
+      },
+      "model": "panling:item/mirror_edge_rub"
+    }
+  ]
+}

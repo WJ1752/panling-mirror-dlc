@@ -1,0 +1,44 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/netherite_boots"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 203
+      },
+      "model": "panling:item/mirror_zhao_boots"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 207
+      },
+      "model": "panling:item/mirror_lie_boots"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 211
+      },
+      "model": "panling:item/mirror_jing_boots"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 215
+      },
+      "model": "panling:item/mirror_can_boots"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 219
+      },
+      "model": "panling:item/mirror_twin_boots"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 223
+      },
+      "model": "panling:item/mirror_rub_boots"
+    }
+  ]
+}

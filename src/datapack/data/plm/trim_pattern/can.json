@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:can",
+  "description": {
+    "translate": "trim_pattern.plm.can"
+  },
+  "template_item": "minecraft:air"
+}

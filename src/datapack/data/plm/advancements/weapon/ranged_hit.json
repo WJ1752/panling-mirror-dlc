@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "arrow_hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          },
+          "direct_entity": {
+            "type": "minecraft:arrow"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "arrow_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:weapon/dmg/archer_hit"
+  }
+}

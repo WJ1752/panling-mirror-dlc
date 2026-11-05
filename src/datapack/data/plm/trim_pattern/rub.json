@@ -1,0 +1,7 @@
+{
+  "asset_id": "plm:rub",
+  "description": {
+    "translate": "trim_pattern.plm.rub"
+  },
+  "template_item": "minecraft:air"
+}

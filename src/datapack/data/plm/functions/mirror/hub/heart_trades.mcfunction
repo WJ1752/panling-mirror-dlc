@@ -1,0 +1,9 @@
+# @s 为影商。只替换旧的金镜片误兑倒影核配方，保留其余交易次数和价格。
+execute if entity @s[tag=plm_heart_trades] run return 0
+data remove entity @s Offers.Recipes[{buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_metal"}},sell:{id:"minecraft:nautilus_shell",tag:{id:"panling:mirror_core"}}}]
+data modify entity @s Offers.Recipes append value {buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_metal"}},sell:{id:"minecraft:amethyst_shard",Count:1b,tag:{id:"panling:mirror_heart_metal",CustomModelData:340,display:{Name:'{"translate":"pl.item.name.mirror_heart_metal"}'}}},maxUses:999,rewardExp:0b}
+data modify entity @s Offers.Recipes append value {buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_wood"}},sell:{id:"minecraft:amethyst_shard",Count:1b,tag:{id:"panling:mirror_heart_wood",CustomModelData:345,display:{Name:'{"translate":"pl.item.name.mirror_heart_wood"}'}}},maxUses:999,rewardExp:0b}
+data modify entity @s Offers.Recipes append value {buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_water"}},sell:{id:"minecraft:amethyst_shard",Count:1b,tag:{id:"panling:mirror_heart_water",CustomModelData:350,display:{Name:'{"translate":"pl.item.name.mirror_heart_water"}'}}},maxUses:999,rewardExp:0b}
+data modify entity @s Offers.Recipes append value {buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_fire"}},sell:{id:"minecraft:amethyst_shard",Count:1b,tag:{id:"panling:mirror_heart_fire",CustomModelData:355,display:{Name:'{"translate":"pl.item.name.mirror_heart_fire"}'}}},maxUses:999,rewardExp:0b}
+data modify entity @s Offers.Recipes append value {buy:{id:"minecraft:netherite_scrap",Count:3b,tag:{id:"panling:mirror_shard_earth"}},sell:{id:"minecraft:amethyst_shard",Count:1b,tag:{id:"panling:mirror_heart_earth",CustomModelData:360,display:{Name:'{"translate":"pl.item.name.mirror_heart_earth"}'}}},maxUses:999,rewardExp:0b}
+tag @s add plm_heart_trades

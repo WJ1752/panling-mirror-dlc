@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "projectile_hurt": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "projectile_hurt"
+    ]
+  ],
+  "rewards": {
+    "function": "plm:weapon/fx/zhe_guang"
+  }
+}
