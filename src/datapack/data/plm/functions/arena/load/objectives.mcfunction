@@ -5,6 +5,12 @@ scoreboard objectives add mirror_boss_hp dummy
 scoreboard objectives add mirror_boss_max dummy
 scoreboard objectives add mirror_boss_damage dummy
 scoreboard objectives add mirror_arena_run dummy
+scoreboard objectives add mirror_arena_party dummy
+scoreboard objectives add mirror_shadow_lord_done dummy
+scoreboard objectives add mirror_arena_paid dummy
+scoreboard objectives add mirror_portal_start dummy
+scoreboard objectives add mirror_arena_outcome dummy
+scoreboard objectives add mirror_attack_cd dummy
 scoreboard objectives add mirror_abs_dealt minecraft.custom:minecraft.damage_dealt_absorbed
 scoreboard objectives add mirror_abs_seen dummy
 scoreboard objectives add mirror_boss_window_used dummy

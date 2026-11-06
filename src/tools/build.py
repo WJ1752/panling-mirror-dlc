@@ -198,7 +198,7 @@ def deploy_test(dp_zip, rp_zip, test_dp_dir=None, pack_name='panling-mirror-weap
 def backup_prod(prod_dir, backup_dir=None):
     """完整备份 world/ + server.properties；返回备份目录。"""
     stamp = __import__('datetime').datetime.now().strftime('%Y%m%d-%H%M%S')
-    root = os.path.join(backup_dir or PROD_BACKUP_DIR, 'alpha52-%s' % stamp)
+    root = os.path.join(backup_dir or PROD_BACKUP_DIR, 'mirror-%s' % stamp)
     os.makedirs(root, exist_ok=True)
     world = os.path.join(prod_dir, 'world')
     if not os.path.isdir(world):
@@ -217,7 +217,8 @@ def backup_prod(prod_dir, backup_dir=None):
     return root
 
 
-def deploy_prod(dp_zip, rp_zip, rp_sha1, prod_dir=None, backup_dir=None, server_stopped=False):
+def deploy_prod(dp_zip, rp_zip, rp_sha1, prod_dir=None, backup_dir=None, server_stopped=False,
+                install_shadow_map=False):
     """安全部署：
 
     必须显式声明服务器已停服；先完整备份 world/ + server.properties；
@@ -239,7 +240,22 @@ def deploy_prod(dp_zip, rp_zip, rp_sha1, prod_dir=None, backup_dir=None, server_
         rp_url = next((l.split('=', 1)[1] for l in lines if l.startswith('resource-pack=')), '')
         if '://' not in rp_url.replace('\\:', ':') or '/' not in rp_url.split('//', 1)[-1]:
             raise SystemExit('请先在 server.properties 配置完整的 resource-pack 文件 URL。')
-    backup_prod(root, backup_dir)
+    snapshot = backup_prod(root, backup_dir)
+    if install_shadow_map:
+        # Reuse the cold-backup/deployment transaction for the adjacent world
+        # patch. The generator preserves original chunks and checks session.lock.
+        world = os.path.join(root, 'world')
+        subprocess.run([
+            sys.executable, '-X', 'utf8', '-I', os.path.join(SRC, 'tools', 'gen_shadow_map.py'),
+            '--source-world', world, '--target-world', world,
+            '--backup-dir', os.path.join(snapshot, 'shadow-regions'), '--apply',
+        ], check=True)
+        # The legacy launcher otherwise resets the URL back to the base pack.
+        updater = os.path.join(root, 'tools', 'update-pack-url.ps1')
+        os.makedirs(os.path.dirname(updater), exist_ok=True)
+        if os.path.isfile(updater):
+            shutil.copyfile(updater, os.path.join(snapshot, 'update-pack-url.ps1'))
+        shutil.copyfile(os.path.join(SRC, 'tools', 'update_pack_url.ps1'), updater)
 
     for old in os.listdir(world_dp):
         if old.startswith('panling-mirror-') and old.endswith('.zip') and '.bak.' not in old:
@@ -282,6 +298,8 @@ def main():
                     help='确认正式服已 save-all flush + stop 且进程退出；缺少此参数时 deploy-prod 拒绝执行')
     ap.add_argument('--prod-dir', default=None, help='正式服目录（默认 梦回盘灵服务端）')
     ap.add_argument('--backup-dir', default=None, help='备份目录（默认 backups/）')
+    ap.add_argument('--install-shadow-map', action='store_true',
+                    help='随停服正式部署安装圣山西侧影域地图，并保留启动器的合并资源包设置')
     ap.add_argument('--yes', action='store_true', help='正式服部署二次确认')
     args = ap.parse_args()
 
@@ -295,6 +313,8 @@ def main():
         print('\n✗ 拒绝部署：正式服必须先在游戏内 save-all flush + stop，并确认进程已退出；'
               '然后加 --server-stopped 重跑。')
         sys.exit(1)
+    if args.install_shadow_map and not args.deploy_prod:
+        ap.error('--install-shadow-map 必须与 --deploy-prod --server-stopped 一起使用')
 
     os.makedirs(DIST, exist_ok=True)
 
@@ -331,7 +351,8 @@ def main():
             sys.exit(1)
         print('\n── deploy-prod ──')
         deploy_prod(dp_zip, rp_zip, rp_sha, prod_dir=args.prod_dir,
-                    backup_dir=args.backup_dir, server_stopped=args.server_stopped)
+                    backup_dir=args.backup_dir, server_stopped=args.server_stopped,
+                    install_shadow_map=args.install_shadow_map)
     print('\n✓ 完成')
 
 

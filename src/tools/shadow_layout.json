@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "selected_source": "pangu_mountain",
+  "sources": {
+    "pangu_mountain": {
+      "description": "Production Pangu mountain island, including the Pangu fight, NPC platform, caves, and arena walls.",
+      "bounds": {
+        "min_x": -525,
+        "max_x": -158,
+        "min_y": -64,
+        "max_y": 319,
+        "min_z": -1669,
+        "max_z": -1277
+      },
+      "axis_x": -525.5,
+      "target_bounds": {
+        "min_x": -893,
+        "max_x": -526,
+        "min_y": -64,
+        "max_y": 319,
+        "min_z": -1669,
+        "max_z": -1277
+      }
+    }
+  },
+  "preserve_technical_bedrock": {
+    "description": "Restore only pre-existing bedrock blocks from the sparse original south access rail after mirroring. The source mountain and original wall stay untouched.",
+    "min_x": -560,
+    "max_x": -526,
+    "y": 0,
+    "min_z": -1440,
+    "max_z": -1425
+  },
+  "signature": {
+    "pos": [-704, -63, -1450],
+    "block": "bedrock",
+    "version": 1
+  },
+  "landmarks": {
+    "source_pangu_return": [-339, 208, -1442],
+    "town_source_center": [-347.5, 206, -1450.5],
+    "portal_source_block": [-339, 207, -1442],
+    "portal": [-711.5, 208, -1441.5],
+    "portal_block": [-712, 207, -1442],
+    "town_return": [-703.5, 206, -1449.5],
+    "town_return_block": [-704, 205, -1450],
+    "arena_center": [-711.5, -40, -1441.5],
+    "arena_center_block": [-712, -41, -1442],
+    "source_arena_barrier_bounds": {
+      "min_x": -370,
+      "max_x": -333,
+      "min_y": 191,
+      "max_y": 212,
+      "min_z": -1475,
+      "max_z": -1433,
+      "count": 931
+    },
+    "construction_boxes": {
+      "terrain_mirror": {"min_x": -893, "max_x": -526, "min_y": -64, "max_y": 319, "min_z": -1669, "max_z": -1277},
+      "town_and_market": {"min_x": -724, "max_x": -686, "min_y": 195, "max_y": 224, "min_z": -1474, "max_z": -1435},
+      "portal_landing": {"min_x": -715, "max_x": -709, "min_y": 207, "max_y": 214, "min_z": -1445, "max_z": -1439},
+      "walk_routes": {"min_x": -811, "max_x": -571, "min_y": 48, "max_y": 206, "min_z": -1640, "max_z": -1360},
+      "wilderness_ruins": {"min_x": -814, "max_x": -569, "min_y": 46, "max_y": 190, "min_z": -1643, "max_z": -1358}
+    },
+    "town_safe_box": {
+      "min_x": -724,
+      "max_x": -686,
+      "min_y": 194,
+      "max_y": 224,
+      "min_z": -1474,
+      "max_z": -1435
+    },
+    "town_slots": {
+      "plm_shadow_merchant_spot": [-700.5, 206, -1454.5],
+      "plm_shadow_forge": [-707.5, 205.5, -1455.5],
+      "plm_shadow_forge_use": [-706.5, 206, -1455.5],
+      "plm_shadow_guide_spot": [-706.5, 206, -1448.5],
+      "plm_shadow_exit_spot": [-700.5, 206, -1448.5]
+    },
+    "main_return": [179.5, 43, 19.5],
+    "main_entry_trader": [183.5, 43, 22.5],
+    "wilderness_spawn_points": [
+      {"tag": "plm_shadow_wilderness_spawn", "id": 1, "feet": [-570.5, 187, -1479.5], "source_surface": [-480, 186, -1480]},
+      {"tag": "plm_shadow_wilderness_spawn", "id": 2, "feet": [-630.5, 169, -1399.5], "source_surface": [-420, 168, -1400]},
+      {"tag": "plm_shadow_wilderness_spawn", "id": 3, "feet": [-750.5, 49, -1599.5], "source_surface": [-300, 48, -1600]},
+      {"tag": "plm_shadow_wilderness_spawn", "id": 4, "feet": [-810.5, 64, -1359.5], "source_surface": [-240, 63, -1360]},
+      {"tag": "plm_shadow_wilderness_spawn", "id": 5, "feet": [-650.5, 82, -1639.5], "source_surface": [-400, 81, -1640]}
+    ],
+    "walk_routes": [
+      {
+        "id": "shadow_ring",
+        "width": 3,
+        "headroom": 3,
+        "points": [
+          [-704, -1450, 206],
+          [-704, -1420, 203], [-571, -1420, 190], [-571, -1480, 187],
+          [-600, -1480, 175], [-600, -1640, 96], [-651, -1640, 82],
+          [-700, -1640, 70], [-700, -1600, 62], [-751, -1600, 49],
+          [-760, -1600, 49], [-760, -1360, 61], [-811, -1360, 64],
+          [-740, -1360, 84], [-740, -1400, 103], [-631, -1400, 169],
+          [-631, -1450, 185], [-704, -1450, 206]
+        ]
+      }
+    ]
+  }
+}

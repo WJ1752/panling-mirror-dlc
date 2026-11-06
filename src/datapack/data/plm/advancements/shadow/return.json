@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "return": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"plm_shadow_return\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/town_return_event"
+  }
+}

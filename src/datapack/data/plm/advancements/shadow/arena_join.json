@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "join": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"plm_shadow_arena_join\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/arena/join"
+  }
+}

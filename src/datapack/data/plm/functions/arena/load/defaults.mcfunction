@@ -1,5 +1,7 @@
 # 默认值（#arena / #boss / #rng 为记分板假玩家）
 scoreboard players set #arena mirror_arena_active 0
+scoreboard players set #arena mirror_arena_outcome 0
+scoreboard players set #arena mirror_attack_cd 0
 scoreboard players set #arena mirror_boss_phase 0
 scoreboard players set #boss mirror_boss_hp 600
 scoreboard players set #boss mirror_boss_max 600

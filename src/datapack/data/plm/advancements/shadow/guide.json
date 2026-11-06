@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "read": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"plm_shadow_guide\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/guide/read"
+  }
+}

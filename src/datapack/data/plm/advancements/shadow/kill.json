@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "killed_shadow_enemy": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"monster\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/drop/on_kill"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "dust_trade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "nbt": "{Tags:[\"plm_shadow_entry_trader\"]}"
+        },
+        "item": {
+          "items": ["minecraft:paper"],
+          "nbt": "{plm_shadow_pass:\"dust\"}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/trade/dust"
+  }
+}

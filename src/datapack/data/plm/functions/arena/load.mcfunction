@@ -1,6 +1,7 @@
 # 镜中倒影·影主竞技场 —— 加载入口
 # 旧存档可能已设置 mirror_loaded 但只有部分灰盒计分板。独立的结构版本允许一次性补齐。
-execute unless data storage plm:arena {schema:1} run function plm:arena/load/ensure
+execute unless data storage plm:arena {schema:4} run function plm:arena/load/ensure
+scoreboard players set #arena mirror_portal_start 0
 data remove storage plm:arena room.ready
 execute if score #arena mirror_arena_run matches 0 run scoreboard players set #arena mirror_arena_active 0
 scoreboard players set #arena mirror_loaded 1

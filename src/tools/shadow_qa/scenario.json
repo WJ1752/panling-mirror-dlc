@@ -1,0 +1,46 @@
+{
+  "merchantApproach": [
+    183.5,
+    43,
+    20.5
+  ],
+  "memberTag": "plm_shadow_active",
+  "town": [
+    -703.5,
+    206,
+    -1449.5
+  ],
+  "exitTag": "plm_shadow_exit",
+  "installChecks": [
+    "execute if block -704 -63 -1450 minecraft:bedrock",
+    "execute if entity @e[type=villager,tag=plm_shadow_entry_trader]",
+    "execute if entity @e[type=marker,tag=plm_shadow_town_return]",
+    "execute if entity @e[type=interaction,tag=plm_shadow_exit]",
+    "execute at @e[type=marker,tag=plm_shadow_arena_center,limit=1] if block ~-6 ~-1 ~-6 minecraft:sea_lantern",
+    "execute at @e[type=marker,tag=plm_shadow_arena_center,limit=1] if block ~4 ~24 ~4 minecraft:sea_lantern"
+  ],
+  "payments": [
+    {
+      "name": "one shadow dust",
+      "tradeIndex": 0,
+      "item": "minecraft:gunpowder{id:\"panling:mirror_dust\",CustomModelData:390,display:{Name:'{\"translate\":\"pl.item.name.mirror_dust\"}'}}",
+      "match": "minecraft:gunpowder{id:\"panling:mirror_dust\"}"
+    },
+    {
+      "name": "one official silver ticket",
+      "tradeIndex": 1,
+      "item": "minecraft:iron_ingot{id:\"panling:silver_ticket\",display:{Name:'{\"translate\":\"pl.item.name.silver\"}'}}",
+      "match": "minecraft:iron_ingot{id:\"panling:silver_ticket\"}"
+    }
+  ],
+  "combat": {
+    "setup": [],
+    "portalTag": "plm_shadow_arena_portal",
+    "joinTag": "plm_shadow_arena_join",
+    "arrowPosition": [
+      -711.5,
+      -40,
+      -1431.5
+    ]
+  }
+}

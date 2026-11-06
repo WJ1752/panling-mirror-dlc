@@ -3,6 +3,7 @@
   "values": [
     "plm:load/main",
     "plm:arena/load",
-    "plm:domains/load"
+    "plm:domains/load",
+    "plm:shadow/load"
   ]
 }

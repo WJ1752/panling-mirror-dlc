@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{Tags:[\"plm_shadow_arena_portal\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "plm:shadow/arena/start"
+  }
+}

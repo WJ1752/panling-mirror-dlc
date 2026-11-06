@@ -3,6 +3,7 @@
   "values": [
     "plm:tick/main",
     "plm:arena/tick",
-    "plm:domains/tick"
+    "plm:domains/tick",
+    "plm:shadow/tick"
   ]
 }

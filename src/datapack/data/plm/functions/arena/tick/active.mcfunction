@@ -14,6 +14,7 @@ function plm:arena/boss/health/clamp
 execute store result bossbar plm:mirror_boss value run scoreboard players get #boss mirror_boss_hp
 # 阶段切换
 function plm:arena/phase/check
+execute if score #arena mirror_arena_active matches 1 run function plm:arena/boss/attack
 # 阶段 tick
 execute if score #arena mirror_boss_phase matches 1 run function plm:arena/phase/shadow/tick
 execute if score #arena mirror_boss_phase matches 2 run function plm:arena/phase/lord/tick
